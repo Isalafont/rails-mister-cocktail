@@ -1,6 +1,12 @@
 <div class="container m-3 p-3">
   <h2><%= @cocktail.name %></h2>
 
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <%= image_tag "https://source.unsplash.com/300x400/?cocktail", alt: "Un super cocktail" %>
+  <% end %>
+
   <ul>
     <li>Ingredients</li>
     <li><%= link_to 'Doses', new_cocktail_dose_path(@cocktail) %></li>

@@ -3,6 +3,12 @@
 </div>
 
 <div class="container m-3 p-3">
+
+  <div class="container justify-content-center"><%= cl_image_tag('tug1sdysr6u3ki6kmmok', alt: "test",
+      width: 400, height: 300, crop: :fill) %>
+  </div>
+
+
     <% @cocktails.each do |cocktail| %>
       <article>
       <h2><%= link_to cocktail.name, cocktail %></h2>
