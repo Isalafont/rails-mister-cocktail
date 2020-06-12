@@ -12,6 +12,16 @@
   </head>
 
   <body>
-    <%= yield %>
+      <%= render 'shared/navbar' %>
+
+    <%#= render 'shared/flashes' %>
+    <div class="custom-container">
+
+      <%= yield %>
+    </div>
+      <% unless current_page?('/')%>
+        <%= render "shared/footer" %>
+      <% end %>
+
   </body>
 </html>
