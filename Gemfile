@@ -29,6 +29,9 @@ gem 'activestorage', '>= 6.0.3.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Use Devise to authenticate User
+gem 'devise'
+
 # Le Wagon Style
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
