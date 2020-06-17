@@ -12,11 +12,9 @@
   </head>
 
   <body>
-      <%= render 'shared/navbar' %>
-
+    <%= render 'shared/navbar' %>
     <%#= render 'shared/flashes' %>
-    <div class="custom-container">
-
+    <div class="container-fluid">
       <%= yield %>
     </div>
       <% unless current_page?('/')%>
