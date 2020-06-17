@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
   resources :doses, only: [:destroy]
   resources :reviews, only: [:destroy]
-  resources :profiles, only: [:index]
+  resources :profiles, only: [:index, :edit, :update]
 end

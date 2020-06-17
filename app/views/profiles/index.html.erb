@@ -1,4 +1,4 @@
-<div class="container m-3 p-3 justify-content-center">
+<div class="container m-3 p-3 justify-content-center border border-warning">
   <div class="card card-picture">
     <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, alt: "profile photo", class: "profile-img" %>
@@ -6,24 +6,28 @@
       <%= image_tag('profile-pic.jpg', alt: "profile photo", class: "profile-img") %>
     <% end %>
   </div>
-  <div class="card card-profile">
+  <div class="card card-profile p-3">
     <p>Welcome</p>
     <% if current_user.first_name.present? %>
       <p><%= current_user.first_name %></p>
     <% else %>
       <p><%= current_user.email %></p>
     <% end %>
+    <p><% current_user.last_name %></p>
+    <div class="link">
+      <%= link_to "Home", cocktails_path, class: "btn-primary" %>
+    </div>
+  </div>
     <div class="position-edit-favicon">
       <%= link_to '<i class="fas fa-user-edit"></i>'.html_safe, edit_user_registration_path(current_user), id:"favicon-profile-edit" %>
     </div>
-  </div>
 </div>
 
-<div class="container m3 p3 justify-content-center">
+<div class="container m-3 p-3 justify-content-center border border-warning">
   <div class="log-out">
     <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"btn-primary" %>
   </div>
-  <div id="alcool">
+  <div id="alcool pt-3">
     <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
   </div>
 </div>
