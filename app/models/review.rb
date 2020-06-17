@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
-  belongs_to :cocktail
   belongs_to :user
+  belongs_to :cocktail
 
   validates :comment, presence: true
 end
