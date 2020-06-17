@@ -7,11 +7,11 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
-    # @review = Review.find(params[:review_id])
   end
 
   def new
     @cocktail = Cocktail.new
+    authorize @cocktail
   end
 
   def create
@@ -21,6 +21,7 @@ class CocktailsController < ApplicationController
     else
       render :new
     end
+    authorize @cocktail
   end
 
   private
