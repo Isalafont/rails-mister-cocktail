@@ -9,12 +9,18 @@
 
   </div>
 
-
     <% @cocktails.each do |cocktail| %>
-      <article>
-      <h2><%= link_to cocktail.name, cocktail %></h2>
-      </article>
+      <div class="cocktail-card">
+        <% if cocktail.photo.attached? %>
+          <div class="cocktail-photo-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), linear-gradient(rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key) %>);">
+        <% else %>
+          <div class="cocktail-photo-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), linear-gradient(rgba(0,0,0,0.3)), url(<%= asset_path("cocktail.jpg") %>);">
+        <% end %>
+      </div>
+        <h2><%= link_to cocktail.name, cocktail %></h2>
+      </div>
     <% end %>
+
 </div>
 
 <div class="container m-3 p-3">
