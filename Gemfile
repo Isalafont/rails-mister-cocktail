@@ -29,8 +29,10 @@ gem 'activestorage', '>= 6.0.3.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Use Devise to authenticate User
+# Use Devise to authentication
 gem 'devise'
+# Use Pundit to authorization
+gem 'pundit'
 
 # Le Wagon Style
 gem 'autoprefixer-rails'

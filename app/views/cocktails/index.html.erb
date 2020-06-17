@@ -24,6 +24,8 @@
 </div>
 
 <div class="container m-3 p-3">
-  <p><%= link_to '➕ Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %></p>
+  <% if policy(Cocktail).create? %>
+    <%= link_to '➕ Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
+  <% end %>
   <p>Share your favorite cocktails <i class="fab fa-twitter-square"></i></p>
 </div>
