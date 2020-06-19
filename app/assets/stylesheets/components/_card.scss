@@ -1,0 +1,44 @@
+// Profil Page
+
+.card-profil {
+  position: relative;
+  margin: 20px auto;
+  padding: 40px 0;
+  display: block;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  .profile-img {
+    margin: 10px 8px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+
+.card-description {
+
+}
+
+.position-edit-favicon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  #favicon-profile-edit {
+    font-size: 24px;
+    color: $secondary-color;
+  }
+}
+
+.card-info {
+  margin: 20px auto;
+  padding: 40px 0;
+  display: block;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

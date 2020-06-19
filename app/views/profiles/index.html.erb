@@ -1,12 +1,12 @@
-<div class="container m-3 p-3 justify-content-center border border-warning">
-  <div class="card card-picture">
+<div class="card-profil">
+  <div class="card-picture">
     <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, alt: "profile photo", class: "profile-img" %>
     <% else %>
       <%= image_tag('profile-pic.jpg', alt: "profile photo", class: "profile-img") %>
     <% end %>
   </div>
-  <div class="card card-profile p-3">
+  <div class="card-description p-3">
     <p>Welcome</p>
     <% if current_user.first_name.present? %>
       <p><%= current_user.first_name %></p>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="container m-3 p-3 justify-content-center border border-warning">
+<div class="card-info">
   <div class="log-out">
     <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"btn-primary" %>
   </div>
@@ -31,3 +31,5 @@
     <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
   </div>
 </div>
+
+<!-- container p-3 justify-content-center border border-warning -->
