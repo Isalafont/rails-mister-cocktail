@@ -1,33 +1,32 @@
-<div class="container p-3">
+<div class="title-index">
   <h1>Welcome to the Cocktail's Page !</h1>
 </div>
 
-<div class="container p-3">
+<!-- <div class="wrapper"> -->
 
   <div class="photo-cocktail">
     <%= image_tag "https://res.cloudinary.com/dy1zfz0fs/image/upload/v1589550759/c6a7ww4vq252s87lialq8w108xhl.jpg", alt: "cocktail photo", height: 300, width: 400, crop: :fill %>
   </div>
 
-  <div class="cocktail-container">
+  <div class="cocktail-wrapper">
     <% @cocktails.each do |cocktail| %>
-      <div class="cocktail-card">
-        <%= link_to cocktail_path(cocktail), class: "cocktail-index-card-link" do %>
-          <% if cocktail.photo.attached? %>
-            <div class="cocktail-photo-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), linear-gradient(rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key) %>);">
-          <% else %>
-            <div class="cocktail-photo-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), linear-gradient(rgba(0,0,0,0.3)), url(<%= asset_path("cocktail.jpg") %>);">
-          <% end %>
-            <div class="cocktail-name">
-              <h2><%= cocktail.name %></h2>
-            </div>
-          </div>
+      <%= link_to cocktail_path(cocktail), class: "cocktail-index-card-link" do %>
+
+        <% if cocktail.photo.attached? %>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key) %>);">
+        <% else %>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path 'cocktail.jpg' %>);">
         <% end %>
-      </div>
+
+          <div class="cocktail-name">
+            <h2><%= cocktail.name %></h2>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
-</div>
 
-<div class="container p-3">
+<div class="link-wrapper">
   <% if policy(Cocktail).create? %>
     <%= link_to '➕ Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
   <% end %>

@@ -44,54 +44,22 @@
 
 // Cocktails Card Index
 
-.container {
-  display: block;
-  text-align: center;
-  justify-content: center;
-}
-
-.cocktail-container {
-  margin: 20px;
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px 30px;
-}
-
-@media (min-width: 100px) and (max-width: 575px) {
-  .cocktail-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 576px) {
-  .cocktail-container { grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 992px) {
-  .cocktail-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .cocktail-card{
-  height: 350px;
-  min-width: 100%;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.cocktail-photo-card{
-  object-fit: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .coctail-name {
+  height: 150px;
   padding: 20px;
   display: flex;
   .cocktail-name a {
