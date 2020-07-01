@@ -17,7 +17,7 @@ class CocktailPolicy < ApplicationPolicy
   end
 
   def update?
-    user == record.user
+    record.user == user
   end
 
   class Scope < Scope
