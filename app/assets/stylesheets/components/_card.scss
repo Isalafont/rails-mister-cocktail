@@ -58,23 +58,18 @@
   padding: 20px;
 }
 
-// .cocktail-info {
-//   height: 200px;
-//   background-color: white;
-// }
-
 .coctail-name {
   display: flex;
-  .cocktail-name a {
-    color: white;
-    text-decoration: none;
-
-  }
 }
+
 .cocktail-index-card-link {
   text-decoration: none;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
   padding: 30px;
   text-align: center;
+}
+
+.cocktail-index-card-link :hover {
+
 }
