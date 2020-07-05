@@ -1,6 +1,24 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.85;
+}
+
+
 .photo-cocktail {
   margin: 40px auto;
+  text-align: center;
+}
+
+.title-index {
+  text-align: center;
+  margin: 30px auto;
 }

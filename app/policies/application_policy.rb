@@ -7,15 +7,15 @@ class ApplicationPolicy
   end
 
   def index?
-    true
+    false
   end
 
   def show?
-    true
+    false
   end
 
   def create?
-    true
+    false
   end
 
   def new?
