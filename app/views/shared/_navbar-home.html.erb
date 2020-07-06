@@ -12,15 +12,15 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <% if current_user.present? %>
-          <%= link_to '➕ Add Cocktail', new_cocktail_path, class:"btn btn-small" %>
+          <%= link_to '➕ Add Cocktail', new_cocktail_path, class:"btn btn-small btn-white" %>
         <% end %>
       </li>
       <li class="nav-item active" %>
-        <div class="nav-link">
+        <div class="nav-link", id="name-link">
           <% if current_user.present? %>
             <%= current_user.first_name || cucurrent_user.email %>
           <% else %>
-            <%= link_to "Sign in", user_session_path, class:" btn btn-small" %>
+            <%= link_to "Sign in", user_session_path, class:"btn btn-small btn-white" %>
           <% end %>
         </div>
       </li>
