@@ -14,7 +14,9 @@
   <body>
     <%= render 'shared/navbar' %>
     <%#= render 'shared/flashes' %>
-    <div class="container-fluid">
+    <% unless current_page?('/')%>
+      <div class="container-fluid">
+    <% end %>
       <%= yield %>
     </div>
       <% unless current_page?('/')%>
