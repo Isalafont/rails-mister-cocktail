@@ -1,13 +1,18 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update]
+  before_action :authenticate_user!, except: [:index, :show], :raise => false
+
+  # after_action :verify_authorized, except: [:index, :show]
+  after_action :verify_policy_scoped, only: [:index]
 
   def index
     # skip_policy_scope
     @cocktails = policy_scope(Cocktail)
+    skip_authorization
   end
 
   def show
-    # @cocktail = Cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
     skip_authorization
   end
 
@@ -35,7 +40,7 @@ class CocktailsController < ApplicationController
     @cocktail.update(cocktail_params)
     authorize @cocktail
     if @cocktail.save
-      redirect_to cocktail_path(@cave), notice: 'Your cocktail was successfully updated.'
+      redirect_to cocktail_path(@cocktail), notice: 'Your cocktail was successfully updated.'
     else
       render :new
     end

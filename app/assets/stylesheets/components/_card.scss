@@ -46,6 +46,7 @@
 
 .cocktail-card{
   height: 350px;
+  min-width: 100%;
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -55,7 +56,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px 0;
 }
 
 .coctail-name {
@@ -66,10 +67,14 @@
   text-decoration: none;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 30px;
-  text-align: center;
+  padding: 15px;
 }
 
 .cocktail-index-card-link :hover {
-
+  text-decoration: none;
+  color: white;
+  .cocktail-index-card-link a {
+    text-decoration: none;
+    color: white;
+  }
 }

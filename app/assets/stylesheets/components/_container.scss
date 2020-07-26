@@ -1,7 +1,7 @@
 .container-fluid {
   margin-top: 70px;
   margin-bottom: 110px;
-  padding: 90px;
+  padding: 15px;
 }
 
 // INDEX COCKTAILS
@@ -17,7 +17,7 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px 30px;
+  grid-gap: 10px 10px;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
