@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :new, :create, :edit, :update]
+  before_action :set_cocktail, only: [:show, :edit, :update]
   before_action :authenticate_user!, except: [:index, :show], :raise => false
 
   # after_action :verify_authorized, except: [:index, :show]
@@ -12,18 +12,16 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # @cocktail = Cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
     skip_authorization
   end
 
   def new
-    # @cocktail = Cocktail.find(params[:id])
     @cocktail = Cocktail.new
     authorize @cocktail
   end
 
   def create
-    # @cocktail = Cocktail.find(params[:id])
     @cocktail = Cocktail.new(cocktail_params)
     authorize @cocktail
     # @cocktail.user = current_user
