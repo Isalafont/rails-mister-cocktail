@@ -7,5 +7,6 @@ class Cocktail < ApplicationRecord
   has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true
+  validates :image, presence: true
   validates :note, numericality: { only_integer: true}, inclusion: { in: RATING, message: '%{value} is not a valid rating.'}
 end
