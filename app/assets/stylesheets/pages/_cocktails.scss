@@ -1,6 +1,16 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    margin: 0;
+    font-family: "Work Sans", "Helvetica", "sans-serif";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0E0000;
+    text-align: left;
+    background-color: $light-gray;
+}
 
 .photo-cocktail {
   margin: 40px auto;
