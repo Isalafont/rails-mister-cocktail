@@ -67,13 +67,8 @@
   text-decoration: none;
   color: white;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 15px;
-}
-
-.cocktail-index-card-link :hover {
-  text-decoration: none;
-  color: white;
-  .cocktail-index-card-link a {
+  padding: 5px;
+  &:hover {
     text-decoration: none;
     color: white;
   }
