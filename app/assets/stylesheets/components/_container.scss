@@ -6,11 +6,10 @@
 
 // INDEX COCKTAILS
 
-// .wrapper {
-//  display: block;
-//  text-align: center;
-//  justify-content: center;
-// }
+.link-wrapper {
+ text-align: right;
+    margin: 15px 25px;
+}
 
 .cocktail-wrapper {
   margin: 20px;
@@ -18,6 +17,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px 10px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
