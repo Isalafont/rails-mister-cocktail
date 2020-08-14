@@ -12,7 +12,9 @@
 }
 
 .cocktail-wrapper {
-  margin: 20px;
+  // margin: 20px;
+  padding-left: 10px;
+  margin-right: 20px;
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -23,6 +25,9 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .cocktail-wrapper {
     grid-template-columns: 1fr;
+  }
+  .cocktail-card{
+    min-width: 100%;
   }
 }
 

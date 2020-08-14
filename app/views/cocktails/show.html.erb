@@ -1,4 +1,4 @@
-<div class="container m-3 p-3">
+<div class="container p-3">
   <h2><%= @cocktail.name %></h2>
 
   <% if @cocktail.photo.attached? %>
@@ -9,7 +9,7 @@
 
   <ul>
     <li>Ingredients</li>
-    <li><%= link_to 'Doses', new_cocktail_dose_path(@cocktail) %></li>
+    <li><%= link_to 'Quantité', new_cocktail_dose_path(@cocktail) %></li>
   </ul>
 
   <!-- <div class="container justify-content-center m-3 p-3"> -->
