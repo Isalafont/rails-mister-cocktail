@@ -21,28 +21,3 @@
   grid-gap: 10px 10px;
   margin-bottom: 50px;
 }
-
-@media (min-width: 100px) and (max-width: 575px) {
-  .cocktail-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .cocktail-card{
-    min-width: 100%;
-  }
-}
-
-@media (min-width: 576px) {
-  .cocktail-wrapper { grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 992px) {
-  .cocktail-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1280px) {
-  .cocktail-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
