@@ -1,19 +1,17 @@
-<div class="container">
-
-  <div class="cocktail-cover-wrapper">
-    <div class="cocktail-cover">
-      <div class="cocktail-cover-title">
-        <h2><%= @cocktail.name %></h2>
-      </div>
+<div class="cocktail-cover-wrapper">
+  <div class="cocktail-cover">
+    <div class="cocktail-cover-title">
+      <h2><%= @cocktail.name %></h2>
     </div>
-
   </div>
+
+</div>
 
 
   <% if @cocktail.photo.attached? %>
     <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <% else %>
-    <%= image_tag "https://source.unsplash.com/300x400/?cocktail", alt: "Un super cocktail" %>
+    <%= image_tag "https://source.unsplash.com/400x500/?cocktail", alt: "Un super cocktail" %>
   <% end %>
 
   <ul>
@@ -34,4 +32,4 @@
   </ul>
   <hr>
   <p><%= link_to 'Go back to Cocktails', cocktails_path, class:"btn btn-small btn-success" %></p>
-</div>
+
