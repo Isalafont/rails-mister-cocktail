@@ -21,3 +21,25 @@
   grid-gap: 10px 10px;
   margin-bottom: 50px;
 }
+
+// SHOW COCKTAIL
+
+.cocktail-cover-wrapper{
+  width: 100%;
+  height: 290px;
+  position: relative;
+  background-color: #b7e030;
+}
+
+.cocktail-cover{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-size: cover;
+}
+
+.cocktail-cover-title{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
