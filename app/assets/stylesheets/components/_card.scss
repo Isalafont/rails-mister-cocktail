@@ -74,3 +74,46 @@
     color: white;
   }
 }
+
+// COCKTAIL SHOW CARDS _ CONTAINER
+
+.cocktail-info-container {
+  display: flex;
+  margin: 20px 80px;
+}
+
+.cocktail-chapter-title {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.cocktail-line-title {
+  display: block;
+  width: 50px;
+  height: 0;
+  margin: 15px auto;
+  border-bottom: 2px solid #666;
+}
+
+.cocktail-info {
+  width: 100%;
+}
+
+.cocktail-ingredients {
+  line-height: 27px;
+  vertical-align: baseline;
+  margin-bottom: 55px;
+  ul.ind-list {
+    list-style: none;
+    vertical-align: baseline;
+    margin-bottom: 55px;
+  }
+  li.ind-list {
+    line-height: 27px;
+  }
+}
+
