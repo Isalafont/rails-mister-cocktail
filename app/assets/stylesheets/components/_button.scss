@@ -81,5 +81,25 @@
   &:hover {
     color: $secondary-dark;
   }
+  &:focus {
+    background-color: $secondary-dark;
+  }
+}
+
+.link-arrow-back {
+  display: flex;
+  justify-content: flex-start;
+  margin: 50px;
+}
+
+#favicon-link-back {
+  color: $secondary-color;
+  font-size: 24px;
+  &:hover {
+    color: $secondary-dark;
+  }
+  &:focus {
+    background-color: $secondary-dark;
+  }
 }
 
