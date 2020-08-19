@@ -52,7 +52,7 @@
   background-position: center;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 13px 12px 15px rgba(0,0,0,0.24);
+  box-shadow: 13px 12px 15px rgba(0,0,0,0.15);
   display: flex;
   text-align: center;
   justify-content: center;
@@ -78,8 +78,25 @@
 // COCKTAIL SHOW CARDS _ CONTAINER
 
 .cocktail-info-container {
+  width: 75%;
+  max-width: 1000px;
+  min-width: 565px;
+  border-radius: 8px;
+  box-shadow: 3px 14px 15px rgba(0,0,0,.14);
   display: flex;
-  margin: 20px 80px;
+  margin: auto;
+  position: relative;
+  // background-color: $primary-color;
+  .link-add-ingredient {
+    position: absolute;
+    top: 4px;
+    right: 90px;
+  }
+}
+
+.cocktail-photo-left {
+  width: 40%;
+
 }
 
 .cocktail-chapter-title {
@@ -96,7 +113,7 @@
   width: 50px;
   height: 0;
   margin: 15px auto;
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid #ffc400;
 }
 
 .cocktail-info {
@@ -107,13 +124,31 @@
   line-height: 27px;
   vertical-align: baseline;
   margin-bottom: 55px;
-  ul.ind-list {
-    list-style: none;
-    vertical-align: baseline;
-    margin-bottom: 55px;
-  }
-  li.ind-list {
-    line-height: 27px;
-  }
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  flex-grow: 1;
 }
+
+.quantity {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.delete {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 25px;
+}
+
+
+
 

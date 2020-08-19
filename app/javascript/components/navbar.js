@@ -15,3 +15,4 @@ export { initUpdateNavbarOnScroll };
 
 // Taille de la fenêtre
 // window.innerHeight
+// scrollByLines(10)
