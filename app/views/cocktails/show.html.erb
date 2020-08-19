@@ -20,10 +20,8 @@
     <div class="cocktail-chapter-title">
       <h2>Ingredients</h2>
       <div class="cocktail-line-title"></div>
-
     </div>
     <div class="cocktail-ingredients">
-
       <ul class="ind-list">
         <% @cocktail.doses.each do |dose| %>
           <li><%= dose.description %> - <%= dose.ingredient.name %>
@@ -32,7 +30,7 @@
           </li>
           <% end %>
         <% end %>
-        <p><%= link_to 'Ajouter un Ingredient', new_cocktail_dose_path(@cocktail), class:"btn btn-small btn-primary" %></p>
+        <p><%= link_to 'Ajouter un Ingredient', new_cocktail_dose_path(@cocktail), class:"btn-secondary" %></p>
       </ul>
 
     </div>

@@ -78,13 +78,11 @@
 // COCKTAIL SHOW CARDS _ CONTAINER
 
 .cocktail-info-container {
-  width: 80%;
+  width: 75%;
   max-width: 1000px;
   min-width: 565px;
   display: flex;
-  margin: 50px 80px;
-  margin-left: 100px;
-  // padding-left: 50px;
+  margin: auto;
   background-color: $primary-color;
 }
 
