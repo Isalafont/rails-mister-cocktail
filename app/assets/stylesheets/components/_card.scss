@@ -83,7 +83,13 @@
   min-width: 565px;
   display: flex;
   margin: auto;
+  position: relative;
   // background-color: $primary-color;
+  .link-add-ingredient {
+    position: absolute;
+    top: 4px;
+    right: 90px;
+  }
 }
 
 .cocktail-photo-left {
@@ -145,6 +151,7 @@
   align-items: center;
   margin-left: 25px;
 }
+
 
 
 
