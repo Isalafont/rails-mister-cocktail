@@ -5,16 +5,20 @@ class CocktailPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    record.user == user
   end
 
   def create?
     true
   end
 
-  def new?
-    create?
+  def edit
+    update?
   end
+
+  # def new?
+  #   create?
+  # end
 
   def update?
     record.user == user

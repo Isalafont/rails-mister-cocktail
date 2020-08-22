@@ -7,13 +7,15 @@
     <% end %>
   </div>
   <div class="card-description p-3">
-    <p>Welcome</p>
-    <% if current_user.first_name.present? %>
-      <p><%= current_user.first_name %></p>
-    <% else %>
-      <p><%= current_user.email %></p>
-    <% end %>
-    <p><% current_user.last_name %></p>
+    <p>
+      Bonjour
+      <% if current_user.first_name.present? %>
+        <%= current_user.first_name %>
+      <% else %>
+        <%= current_user.email %>
+      <% end %>
+      <% current_user.last_name %></p>
+    <p> Vous avez créé <%= current_user.cocktails.ids.size %> cocktails</p>
     <div class="link">
       <%= link_to "Home", cocktails_path, class: "btn-primary" %>
     </div>
@@ -31,5 +33,3 @@
     <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
   </div>
 </div>
-
-<!-- container p-3 justify-content-center border border-warning -->

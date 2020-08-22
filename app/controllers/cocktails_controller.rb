@@ -24,7 +24,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     authorize @cocktail
-    # @cocktail.user = current_user
+    @cocktail.user = current_user
     if @cocktail.save
       redirect_to cocktail_path(@cocktail), notice: 'Your cocktail was successfully created.'
     else
@@ -37,8 +37,8 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    @cocktail.update(cocktail_params)
     authorize @cocktail
+    @cocktail.update(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail), notice: 'Your cocktail was successfully updated.'
     else
