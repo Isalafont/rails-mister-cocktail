@@ -7,7 +7,7 @@ class CocktailsController < ApplicationController
 
   def index
     # skip_policy_scope
-    @cocktails = policy_scope(Cocktail)
+    @cocktails = policy_scope(Cocktail).order(created_at: :desc)
     skip_authorization
   end
 
