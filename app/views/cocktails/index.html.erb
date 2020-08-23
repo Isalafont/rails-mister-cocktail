@@ -29,7 +29,7 @@
   </div>
 
 <div class="link-wrapper">
-  <% if policy(@cocktails).create? %>
-    <%= link_to '➕ Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
+  <% if policy(Cocktail).create? %>
+    <%= link_to 'Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
   <% end %>
 </div>
