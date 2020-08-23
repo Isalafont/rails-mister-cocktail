@@ -2,7 +2,7 @@
 
 .card-profil {
   position: relative;
-  margin: 20px auto;
+  margin: 100px 50px 25px 50px;
   padding: 40px 0;
   display: block;
   text-align: center;
@@ -33,11 +33,12 @@
 }
 
 .card-info {
-  margin: 20px auto;
+  margin: 40px 50px;
   padding: 40px 0;
   display: block;
   text-align: center;
-  background: white;
+  background-color: $secondary;
+  color: white;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -78,19 +79,30 @@
 // COCKTAIL SHOW CARDS _ CONTAINER
 
 .cocktail-info-container {
+  margin: 150px auto;
   width: 75%;
   max-width: 1000px;
   min-width: 565px;
   border-radius: 8px;
   box-shadow: 3px 14px 15px rgba(0,0,0,.14);
   display: flex;
-  margin: auto;
+  // margin: auto;
   position: relative;
-  // background-color: $primary-color;
+  background-color: white;
   .link-add-ingredient {
     position: absolute;
     top: 4px;
     right: 90px;
+  }
+  .effect-container {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    background-color: $primary-color;
+    top: -2.2rem;
+    right: 31.5rem;
+    bottom: 2.6rem;
+    z-index: -2;
   }
 }
 

@@ -1,6 +1,8 @@
 class Cocktail < ApplicationRecord
   RATING = [0, 1, 2, 3, 4, 5]
 
+  belongs_to :user
+
   has_many :doses, dependent: :destroy
   has_many :ingredients, through: :doses
   has_many :reviews, dependent: :destroy

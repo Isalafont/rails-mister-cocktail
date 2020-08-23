@@ -2,12 +2,6 @@
   <h1>Bienvenue sur Mister Cocktail</h1>
 </div>
 
-<!-- <div class="wrapper"> -->
-
-  <!-- <div class="photo-cocktail">
-    <%#= image_tag "https://res.cloudinary.com/dy1zfz0fs/image/upload/v1589550759/c6a7ww4vq252s87lialq8w108xhl.jpg", alt: "cocktail photo", height: 300, width: 400, crop: :fill %>
-  </div> -->
-
   <div class="cocktail-wrapper">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail), class: "cocktail-index-card-link" do %>
@@ -29,7 +23,7 @@
   </div>
 
 <div class="link-wrapper">
-  <% if policy(@cocktails).create? %>
-    <%= link_to '➕ Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
+  <% if policy(Cocktail).create? %>
+    <%= link_to 'Add a new Cocktail', new_cocktail_path, class:"btn btn-small btn-secondary" %>
   <% end %>
 </div>

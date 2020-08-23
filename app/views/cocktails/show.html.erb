@@ -31,9 +31,12 @@
       <% end %>
     </div>
     <div class="link-add-ingredient">
-      <%= link_to '<i class="fas fa-plus-circle"></i>'.html_safe, new_cocktail_dose_path(@cocktail), id:"favicon-add-link" %>
+      <% if policy(Dose).create? %>
+        <%= link_to '<i class="fas fa-plus-circle"></i>'.html_safe, new_cocktail_dose_path(@cocktail), id:"favicon-add-link" %>
+      <% end %>
     </div>
   </div>
+  <div class="effect-container"></div>
 </div>
 
   <!-- <ul class="list-group">
