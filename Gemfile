@@ -16,7 +16,7 @@ gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'turbolinks', '~> 5'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-# gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -37,10 +37,12 @@ gem 'devise'
 gem 'pundit'
 
 # Le Wagon Style
+gem "bootstrap", "~> 5.0.0.beta2"
 gem 'autoprefixer-rails'
 gem 'cloudinary', '~> 1.12.0'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
+gem 'turbolinks_render'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
