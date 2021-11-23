@@ -82,9 +82,8 @@ And add this to `application.html.erb`
 <!-- app/views/layouts/application.html.erb -->
 
   <!-- [...] -->
-
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_pack_tag "application", "data-turbolinks-track": "reload", defer: true, nonce: true %>
 </body>
 ```
 ## Adding new `.scss` files
